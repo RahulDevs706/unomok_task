@@ -1,0 +1,86 @@
+
+.wrapper{
+    width:100%;
+    display: flex;
+    box-sizing: border-box;
+    border-left: 1px solid #0000002a;
+    background-color: white;
+    flex-direction: column;
+    height:100%;
+}
+
+.header{
+    width:100vw;
+    max-width: 100%;
+    display:  flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color:#2D31FA ;
+    color:white;
+}
+
+.icon{
+    padding:5vw;
+    cursor:pointer
+}
+
+.icon svg{
+    font-size: 7vw;
+    transition:all 0.2s ease-in-out
+}
+
+.icon:hover svg{
+    transform: translateX(-15%);
+}
+
+.table{
+    background-color: #fff;
+}
+
+.table div{
+    font:300 3.5vw "Ubuntu";
+    color:#000000af;
+    background-color: #f5f5f5;
+}
+
+.table a{
+    color: white;
+    transition: all 0.5s;
+}
+
+.table a:hover{
+    color:tomato;
+}
+
+.table button:hover{
+    color:tomato;
+}
+
+@media screen and (max-width:768px) and (min-width:550px) {
+    .table div{
+        font:300 2vw "Ubuntu";
+    }
+
+
+    .icon{
+        padding:3.5vw;
+    }
+    .icon svg{
+        font-size: 5vw;
+    }
+
+}
+
+@media screen and (min-width:768px) {
+    .table div{
+        font:300 1vw "Ubuntu";
+    }
+
+    .icon{
+        padding:1vw;
+        padding-right:3vw
+    }
+    .icon svg{
+        font-size: 2vw;
+    }
+}

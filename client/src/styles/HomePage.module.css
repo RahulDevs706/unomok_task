@@ -1,0 +1,126 @@
+.container{
+    width:100vw;
+    height: 100vh;
+    background-color: #DFF6FF;
+    max-width: 100%;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width:100%;
+    height:100%;
+    box-sizing: border-box;
+}
+
+.pageInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top:5%;
+}
+
+.pageInfo h1{
+    font:600 12vw "Ubuntu";
+    color:#051467;
+    margin:auto;
+    border-bottom:5px dashed #051467
+}
+
+.pageInfo h3{
+    font:400 4vw "Ubuntu";
+    color:#2D31FA
+}
+
+.btnContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width:100%
+}
+
+.btnContainer button{
+    border:none;
+    outline:none;
+    margin:10vw;
+    padding:6vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size:10vw;
+    width:65%;
+    background-color: #5d8af4c9;
+    border-radius:15px;
+    color: #051467e1;
+    box-shadow:0 0 10px 1px #82b0c2;
+    transition: all 0.3s ease-in-out ;
+    cursor: pointer;
+}
+
+.wrapper button:hover{
+    box-shadow: 1px 1px 15px 7px #82b0c2;
+    transform: scale(1.05);
+}
+
+.wrapper button svg{
+    font-size:25vw;
+    margin-bottom: 5vw;
+    color: #051467;
+}
+
+@media screen and (max-width:768px) and (min-width:550px) {
+    
+    .wrapper button{
+        margin:7vw;
+        padding:4vw;
+        font-size:7.5vw;
+        width:50%;
+    }
+    .wrapper button svg{
+        font-size:20vw;
+        margin-bottom: 3.5vw;
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    .pageInfo{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top:5%;
+    }
+    
+    .pageInfo h1{
+        font:600 5vw "Ubuntu";
+        color:#051467;
+        margin:auto;
+        border-bottom:5px dashed #051467
+    }
+    
+    .pageInfo h3{
+        font:400 2vw "Ubuntu";
+        color:#2D31FA
+    }
+
+    .btnContainer{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .wrapper button{
+        margin:4vw;
+        padding:3vw;
+        font-size:3vw;
+        width:22%;
+    }
+
+    .wrapper button svg{
+        font-size:7vw;
+        margin-bottom: 2vw;
+    }
+}

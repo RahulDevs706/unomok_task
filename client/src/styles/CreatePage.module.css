@@ -1,0 +1,244 @@
+.container{
+    width:100vw;
+    background-color: #DFF6FF;
+    height:100vh;
+    max-width: 100%;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width:100%;
+    height:100%;
+    box-sizing: border-box;
+    padding-top: 10vw;
+}
+
+.pageDetails{
+    font:300 5.5vw "Ubuntu";
+    color:#051367;
+    margin-bottom: 2.5vw;
+}
+
+.formContainer{
+    width:70%;
+}
+
+.formContainer form{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+.nameInput, .emailInput, .dobInput, .description{
+    display: flex;
+    align-items: center;
+    width:100%;
+    position: relative;
+    margin:2vw;
+}
+
+.nameInput{
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nameInput div{
+    display: flex;
+    align-items: center;
+}
+
+.formContainer input:focus, .formContainer textarea:focus{
+    border:1px solid #051367;
+}
+
+.nameInput div:first-child{
+    margin-bottom: 2vw;
+}
+
+.nameInput div:last-child{
+    margin-top: 2vw;
+}
+
+
+.formContainer div {
+    position: relative;
+    width:100%;
+
+}
+
+.formContainer div input, .formContainer div textarea{
+    width:100%;
+    padding: 5vw;
+    border:none;
+    outline:none;
+    box-shadow: 0px 0px 8px 0px #748a92;
+    border-radius: 10px;
+    font:400 3.2vw "Ubuntu";
+}
+
+.formContainer div input{
+    padding-left:12vw;
+}
+
+.formContainer div input[type="date"]{
+    background-color: white;
+}
+
+.formContainer div textarea{
+    height:40vw;
+    resize:vertical
+}
+
+.formContainer svg{
+    position: absolute;
+    left:5%;
+    font-size:5vw;
+    color: #00000094;
+}
+
+.btnContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%
+}
+
+.btnContainer button{
+    padding:3.5vw;
+    margin:4vw auto;
+    border:none;
+    width:60%;
+    outline: none;
+    background-color: #2D31FA;
+    box-shadow: 0px 0px 8px 0px #748a92;
+    color:white;
+    font:400 3.5vw "Ubuntu";
+    border-radius: 15px;
+    cursor:pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btnContainer button:hover{
+    background-color: #1518be;
+    box-shadow: 0px 0px 12px 4px #82b0c2;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width:768px) and (min-width:550px) {
+
+    .wrapper{
+        padding-top: 2vw;
+    }
+    .pageDetails{
+        font:300 4vw "Ubuntu";
+        margin-bottom: 0;
+    }
+
+    .nameInput, .emailInput, .dobInput, .description{
+        margin:1.5vw;
+    }
+    .nameInput div:first-child{
+        margin-bottom: 1.5vw;
+    }
+    
+    .nameInput div:last-child{
+        margin-top: 1.5vw;
+    }
+
+    .formContainer div input, .formContainer div textarea{
+        padding: 4vw;
+        font:400 2.7vw "Ubuntu";
+    }
+
+
+    .formContainer div input{
+        padding-left:10vw;
+    }
+    
+    .formContainer div textarea{
+        height:30vw;
+    }
+
+    .formContainer svg{
+        font-size:3.5vw;
+    }
+
+    .btnContainer button{
+        padding:3vw;
+        margin:3vw auto;
+        width:50%;
+        font:400 2.7vw "Ubuntu";
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    .wrapper{
+        padding-top: 1vw;
+    }
+
+    .formContainer{
+        width:40%;
+    }
+    .pageDetails{
+        font:300 2vw "Ubuntu";
+        margin-bottom: 0;
+    }
+
+    .nameInput{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nameInput, .emailInput, .dobInput, .description{
+        margin:0.7vw;
+    }
+    .nameInput div:first-child{
+        margin-right: 0.7vw ;
+        margin-bottom: 0;
+    }
+    
+    .nameInput div:last-child{
+        margin-left: 0.7vw;
+        margin-top: 0;
+
+    }
+
+    .formContainer div input, .formContainer div textarea{
+        padding: 1vw;
+        font:400 1vw "Ubuntu";
+    }
+
+    .emailInput svg, .dobInput svg{
+        left:3%
+    }
+
+
+    .formContainer div input{
+        padding-left:3vw;
+    }
+    
+    .formContainer div textarea{
+        height:10vw;
+    }
+
+    .formContainer svg{
+        font-size:1vw;
+    }
+
+    .btnContainer button{
+        padding:1vw;
+        margin:0.8vw auto;
+        width:30%;
+        font:400 1vw "Ubuntu";
+    }
+
+}

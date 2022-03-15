@@ -1,0 +1,44 @@
+.container{
+    width:100%;
+    text-align: center;
+    margin: 0.7vw auto;
+    display: flex;
+    justify-content: center;
+}
+
+.container span{
+    font:400 3.2vw "Ubuntu";
+    width: 90%;
+    padding:1.5vw;
+    border-radius: 10px;
+}
+
+.success{
+    color:rgb(3, 102, 3);
+    background-color: rgba(18, 245, 18, 0.575);
+}
+
+.fail{
+    color:rgb(167, 0, 0);
+    background-color:rgba(241, 138, 138, 0.849)
+}
+
+@media screen and (max-width:768px) and (min-width:550px) {
+    .container span{
+        font:400 2.5vw "Ubuntu";
+        width: 85%;
+        padding:1.2vw;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .container span{
+        font:400 1vw "Ubuntu";
+        width: 60%;
+        padding:0.7vw;
+    }
+
+    .container{
+        margin: 0.5vw auto;
+    }
+}
