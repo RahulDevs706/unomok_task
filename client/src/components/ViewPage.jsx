@@ -24,8 +24,6 @@ const Viewpage = () => {
         })
     }, [])
     
-    console.log(data)
-
 
   const columns=[
     {

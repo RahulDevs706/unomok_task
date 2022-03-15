@@ -9,8 +9,11 @@ import axios from "axios"
 
 import { useNavigate } from 'react-router-dom'
 import ErrorMessage from './utils/ErrorMessage'
+import Loader from './utils/Loader'
 
 const CreatePage = () => {
+
+  const [isLoading, setLoading] = useState(false)
 
   const router = useNavigate();
   const initialMessage = {
@@ -48,15 +51,15 @@ const CreatePage = () => {
 
     const  handleSubmit = async(e)=>{
       e.preventDefault();
-  
+      setLoading(true)
+      
       const config = {
         headers:{"content-type":"application/json"}
       }
   
-    
       await axios.post("/api/v1/user", data, config)
       .then(res=>{
-        console.log(res.data);
+        setLoading(false)
         setError(res.data);
         setTimeout(()=>{
           clearError();
@@ -64,13 +67,15 @@ const CreatePage = () => {
         }, 4000)
       })    
       .catch(error=>{
+        setLoading(false)
         setError(error.response.data);
         setTimeout(clearError, 4000)
       })
     }
   return (
     <>
-    <div className={s.container}>
+    {isLoading?<Loader />:(
+      <div className={s.container}>
       <div className={s.wrapper}>
         <div className={s.pageDetails}>
           <h1>Add Your Details</h1>
@@ -145,6 +150,7 @@ const CreatePage = () => {
         </div>
       </div>
     </div>
+    )}
   </>
   )
 }
